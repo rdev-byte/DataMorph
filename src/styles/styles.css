@@ -1,0 +1,110 @@
+/* src/styles.css */
+
+/* Global styles */
+body {
+  font-family: "Ubuntu", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#36454F;
+  /* Add the white glow effect here */
+  text-shadow: 0 0 10px #fff;
+  color: #fff;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  z-index: 9999;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 2px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.open .menu-icon:nth-child(1) {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.open .menu-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.open .menu-icon:nth-child(3) {
+  transform: translateY(-8px) rotate(45deg);
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+  z-index: 9998;
+}
+
+.open .sidebar {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar li a:hover {
+  color: #fff;
+  background-color: #555;
+}
